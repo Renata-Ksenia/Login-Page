@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+   <html land="ru">
+       <head>
+           <link rel="stylesheet" href="style.css">
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>Velio</title>
+           <link rel="icon" href="image/favicon.png" type="image/x-icon"> 
+           <script src="https://kit.fontawesome.com/1b82dada0e.js" crossorigin="anonymous"></script>
+       </head>
+
+       <body >
+           <div class="background_img">
+                <div class="shadow">
+
+                    <div id="box">
+                        <img src="./__main-logo.png" id="logo" />
+                        <p class="text_benvenuto">Benvenuto nel tuo pannello di controllo.</p>
+                        <p class="text_rule" >Inserisci le tue credenziali per accedere al pannello di controllo.</p>
+                        
+                        <div class="line"></div>
+
+                    
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" name="login" id="UserEmail" placeholder="Indirizzo email" />
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="login" id="UserPassword" placeholder="Password" />
+                    
+                        <div id="error"></div>
+                        <button type="submit" value="signUp" onclick="submit()">ENTRA</button>
+
+                        <script>
+                             const login = document.getElementById("UserEmail");
+                             const password = document.getElementById("UserPassword");
+                             const error = document.getElementById("error");
+
+                            function submit(){
+                                if (login.value === "" ||  password.value === ""){
+                                   error.innerHTML = '<p class="red">La compilazione di tutti i campi è obbligatoria</p>';
+                                   
+                                }
+
+                                else{
+                                error.innerHTML = '<p class="green">L\'acesso effetuato con successo!</p>';
+                                
+                                }
+                                   error.style.marginTop = "5px";
+                                   error.style.fontSize = "12px";
+                            }
+
+                        </script>
+                    </div>   
+
+                </div>
+           </div>
+
+       </body>
+   </html>
